@@ -13,5 +13,14 @@ namespace FizzBuzz.Tests
             string value = fizzBuzz.Print(number);
             Assert.AreEqual("1", value);
         }
+
+        [TestMethod]
+        public void Should_return_fizz_when_number_is_multiple_of_three()
+        {
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            int number = 3;
+            string value = fizzBuzz.Print(number);
+            Assert.AreEqual("Fizz", value);
+        }
     }
 }
