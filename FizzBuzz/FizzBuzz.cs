@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FizzBuzz
+﻿namespace FizzBuzz
 {
     public class FizzBuzz
     {
@@ -11,19 +9,20 @@ namespace FizzBuzz
 
         public string Print(int number)
         {
-            if (number % FizzMultiplier == 0 && number % BuzzMultiplier == 0)
+            string fizzBuzzValue = null;
+            if (number % FizzMultiplier == 0)
             {
-                return FIZZ + BUZZ;
+                fizzBuzzValue += FIZZ;
             }
 
             if (number % BuzzMultiplier == 0)
             {
-                return BUZZ;
+                fizzBuzzValue += BUZZ;
             }
 
-            if (number % FizzMultiplier == 0)
+            if (fizzBuzzValue != null)
             {
-                return FIZZ;
+                return fizzBuzzValue;
             }
 
             return number.ToString();
