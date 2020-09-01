@@ -6,22 +6,24 @@ namespace FizzBuzz
     {
         private const int FizzMultiplier = 3;
         private const int BuzzMultiplier = 5;
+        private const string BUZZ = "Buzz";
+        private const string FIZZ = "Fizz";
 
         public string Print(int number)
         {
             if (number % FizzMultiplier == 0 && number % BuzzMultiplier == 0)
             {
-                return "FizzBuzz";
+                return FIZZ + BUZZ;
             }
 
             if (number % BuzzMultiplier == 0)
             {
-                return "Buzz";
+                return BUZZ;
             }
 
             if (number % FizzMultiplier == 0)
             {
-                return "Fizz";
+                return FIZZ;
             }
 
             return number.ToString();
