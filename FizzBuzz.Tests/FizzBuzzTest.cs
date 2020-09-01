@@ -31,5 +31,14 @@ namespace FizzBuzz.Tests
             string value = fizzBuzz.Print(number);
             Assert.AreEqual("Buzz", value);
         }
+
+        [TestMethod]
+        public void Should_return_fizzbuzz_when_number_is_multiple_of_three_and_five()
+        {
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            int number = 15;
+            string value = fizzBuzz.Print(number);
+            Assert.AreEqual("FizzBuzz", value);
+        }
     }
 }
