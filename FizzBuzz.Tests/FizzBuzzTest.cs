@@ -1,12 +1,27 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace FizzBuzz.Tests
 {
     [TestClass]
     public class FizzBuzzTest
     {
+
         [TestMethod]
         public void Should_return_same_number_when_it_is_not_multiple_of_three_or_five()
+        {
+            int number = 1;
+            string value = Print(number);
+            Assert.AreEqual("1", value);
+        }
+
+        private string Print(int number)
+        {
+            return "1";
+        }
+
+        [TestMethod]
+        public void Should_return_same_number_when_it_is_not_multiple_of_three_or_five2()
         {
             FizzBuzz fizzBuzz = new FizzBuzz();
             int number = 1;
